@@ -1,0 +1,28 @@
+<ul class="backDARK pt-5">
+    <li class="" *ngFor="let film of films; let index = index;">
+        <app-film-component [filmData]="films[index]"></app-film-component>
+    </li>
+</ul>
+<ul class="pagination paginationbar">
+    <li class="page-item">
+        <p class="page-link cursorPoint" (click)="previous()" *ngIf="currentPage!=1" href="#">Previous</p>
+    </li>
+    <li class="page-item">
+        <p class="page-link" *ngIf="currentPage!=1" href="#">1</p>
+    </li>
+    <li class="page-item">
+        <p class="page-link" *ngIf="currentPage!=1" href="#">....</p>
+    </li>
+    <li class="page-item">
+        <p class="page-link active" href="#">{{currentPage}}</p>
+    </li>
+    <li class="page-item">
+        <p class="page-link" *ngIf="currentPage!=totalPage" href="#">...</p>
+    </li>
+    <li class="page-item">
+        <p class="page-link" *ngIf="currentPage!=totalPage" href="#">{{totalPage}}</p>
+    </li>
+    <li class="page-item">
+        <p class="page-link cursorPoint" (click)="next()" *ngIf="currentPage!=totalPage" href="#">Next</p>
+    </li>
+</ul>

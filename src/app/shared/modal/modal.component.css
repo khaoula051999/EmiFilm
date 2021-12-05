@@ -1,0 +1,34 @@
+.modalcomp{
+  height:100vh;
+  width:100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color:rgba(0,0,0,0.5);
+  z-index: 5;
+}
+.displayNone{
+  display: none;
+}
+.modalcomp>.content{
+  width:40%;
+  background-color: white;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.modalcomp>.content>p{
+  font-size: 24px;
+  text-align: center;
+}
+.modalcomp>.content>i{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}

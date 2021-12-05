@@ -1,0 +1,168 @@
+.detailComp {
+    height: Calc(100vh - 67px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+    position: relative;
+}
+
+.detailComp>.addFavoris,
+.inFavoris {
+    position: absolute;
+    background: blue;
+    top: 30px;
+    right: 30px;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    color: black;
+    transition: 1s;
+    transform-origin: all;
+    border: 2px solid transparent;
+    font-weight: bold;
+}
+
+
+.detailComp>.first {
+    width: 40%;
+    height: 80%;
+}
+
+.detailComp>.second {
+    margin-left: 20px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    justify-content: space-around;
+}
+
+.trailer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: black;
+    padding-bottom: 20px;
+}
+
+.trailer>iframe {
+    width: 80%;
+    height: 100%;
+}
+
+.detailComp>.second>.title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.detailComp>.second>.desc {
+    font-size: 22px;
+}
+
+.detailComp>.second>.rate_date {
+    display: flex;
+}
+
+.detailComp>.second>.rate_date>.rating {
+    margin-right: 40px;
+    font-size: 17px;
+}
+
+.detailComp>.second>.rate_date>.rating::before {
+    content: "Rating :";
+    text-decoration: underline;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.detailComp>.second>.rate_date>.date::before {
+    content: "Date  :";
+    text-decoration: underline;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.detailComp>.second>.rate_date>.date {
+    font-size: 17px;
+}
+
+.addReview,
+.revues {
+    background: white;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 40px;
+}
+
+.addReview>.title {
+    margin-top:3rem;
+    margin-left:2rem;
+    color: black;
+    font-size: 20px;
+}
+
+.addReview>.content {
+    margin-left:2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addReview>.content>.textArea {
+    margin-left:3rem;
+    border-radius:1rem;
+    width: 100%;
+    margin-right: 40px;
+    height: 80px;
+}
+
+.addReview>.content>button {
+    border-radius:1rem;
+    background: turquoise;
+    border: 2px 2px blue;
+    outline: none;
+}
+
+.revues {
+    color: black;
+    list-style: none;
+}
+
+.revues>li {
+    margin-bottom: 50px;
+}
+
+.revues>li>.name {
+    font-size: 20px;
+}
+
+.revues>li>.name>span {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.revues>li>.content {}
+
+
+
+.rating{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.rating>i{
+  font-size: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: 1s;
+  transform-origin: all;
+}
+
+.rating>i:hover{
+  color: yellow;
+}

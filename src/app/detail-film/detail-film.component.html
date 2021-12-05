@@ -1,0 +1,40 @@
+<div class="detailComp">
+    <p (click)="addFavoris()" class="addFavoris" *ngIf="isFavoris==false">Add to Favoris</p>
+    <i (click)="removeFavoris()" *ngIf="isFavoris==true" class="bi bi-heart-fill inFavoris"></i>
+    <img class="first" *ngIf="film != undefined" src="{{service.getImage(film.poster_path)}}" />
+    <div class="second">
+        <p *ngIf="film != undefined" class="title">{{film.title}} <span>( {{film.original_title}} )</span></p>
+        <div class="rate_date">
+            <p class="rating" *ngIf="film!=null">{{film.vote_average}}/10</p>
+            <p class="date" *ngIf="film!=null">{{film.release_date}}</p>
+        </div>
+        <p class="desc" *ngIf="film!=null">{{film.overview}}</p>
+    </div>
+</div>
+<div *ngIf='urlVideo!=""' class="trailer">
+    <iframe title="YouTube video player" [src]="urlVideo" frameborder="0" autoplay allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div class="addReview">
+    <p class="title">Commentaire :</p>
+    <form (submit)="addrevue(revuedetail)" class="content">
+        <textarea #revuedetail class="textArea"></textarea>
+        <div class="rating">
+          <i (click)="setRating(1)" class="bi bi-star-fill {{rate>=1?'text-warning':'text-light'}}"> 1</i>
+          <i (click)="setRating(2)" class="bi bi-star-fill {{rate>=2?'text-warning':'text-light'}}"> 2</i>
+          <i (click)="setRating(3)" class="bi bi-star-fill {{rate>=3?'text-warning':'text-light'}}"> 3</i>
+          <i (click)="setRating(4)" class="bi bi-star-fill {{rate>=4?'text-warning':'text-light'}}"> 4</i>
+          <i (click)="setRating(5)" class="bi bi-star-fill {{rate>=5?'text-warning':'text-light'}}"> 5</i>
+        </div>
+        <button>Valider</button>
+    </form>
+</div>
+
+<ul class="revues">
+    <li *ngFor="let r of revues; let index = index;">
+        <p class="name"><i class="bi bi-star-fill text-warning">{{r["rate"]}}</i>  By <span>{{r["idUser"]}}</span> at {{r["date"]}} : </p>
+        <p class="content">{{r["content"]}}</p>
+    </li>
+</ul>
+
+<app-modal [err]="err"></app-modal>

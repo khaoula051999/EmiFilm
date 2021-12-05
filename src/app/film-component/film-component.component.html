@@ -1,0 +1,8 @@
+<div [routerLink]="['./movie/'+filmData.id]" routerLinkActive="active" class="filmComponent">
+    <div>
+        <img src="{{filmService.getImage(filmData.poster_path)}}" />
+        <i *ngIf="isFavoris==true" class="bi bi-heart-fill text-danger 2x"></i>
+        <i *ngIf="isFavoris==false" class="bi bi-heart-fill 2x"></i>
+    </div>
+    <p>{{filmData.title}}</p>
+</div>

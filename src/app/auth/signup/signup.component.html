@@ -1,0 +1,21 @@
+<div class="formauth">
+    <form (submit)="signup(email.value,password.value,cpassword.value)">
+        <p class="title">Sign Up</p>
+        <div class="content">
+            <div class="groupinput">
+                <label>Email</label>
+                <input #email required="" type="email" name="email">
+            </div>
+            <div class="groupinput">
+                <label>Password</label>
+                <input #password required="" type="password" name="password">
+            </div>
+            <div class="groupinput">
+                <label>Confirm password</label>
+                <input #cpassword required="" type="password" name="cpassword">
+            </div>
+        </div>
+        <button>Sign Up</button>
+    </form>
+    <p class="havaccount" [routerLink]="['../sign-in']">I have already an account, <span>click ici</span></p>
+</div>

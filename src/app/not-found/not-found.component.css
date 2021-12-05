@@ -1,0 +1,4 @@
+img {
+    height: Calc(100vh - 70px);
+    width: 100%;
+}

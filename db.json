@@ -1,0 +1,39 @@
+{
+    "films": [{
+            "id": 1,
+            "vote_average": "",
+            "title": "",
+            "poster_math": "",
+            "original_title": "",
+            "overview": "",
+            "release_date": ""
+        },
+        {
+            "id": 2,
+            "vote_average": "",
+            "title": "",
+            "poster_math": "",
+            "original_title": "",
+            "overview": "",
+            "release_date": ""
+        },
+        {
+            "id": 3,
+            "vote_average": "",
+            "title": "",
+            "poster_math": "",
+            "original_title": "",
+            "overview": "",
+            "release_date": ""
+        },
+        {
+            "id": 4,
+            "vote_average": "",
+            "title": "",
+            "poster_math": "",
+            "original_title": "",
+            "overview": "",
+            "release_date": ""
+        }
+    ]
+}

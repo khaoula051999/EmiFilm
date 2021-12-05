@@ -1,0 +1,16 @@
+<div class="favorisComponant">
+    <p class="title">Liste des films en favoris :</p>
+    <ul>
+        <li [routerLink]="['../movie/'+films[index].idFilm]" routerLinkActive="active"  *ngFor="let film of films; let index = index;">
+            <img src="{{service.getImage(films[index].poster_path)}}" />
+            <div class="left">
+                <p>{{films[index].title}}</p>
+                <i class="bi bi-heart-fill 2x"></i>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+
+<app-modal [err]="err"></app-modal>
